@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    mao ni ang panel
+    <br>
+    
+    <br>
+    if page exists, check details, para ma edit (add or delete nft/asset for trade)
+    <br>
+    <input id="pagelink" placeholder="page link"><br>
+    <button>check</button> <button title="dina ma access ang page kay ma redirect sa tinood,
+       para iwas ban">i down</button>
+    
+    
+    <br><br>
+    nft1(details) <button>delete</button><br>
+    nft2(details) <button>delete</button><br>
+    nft3(details) <button>delete</button><br>
+    
+    <br>
+    <br>
+    
+
+   <hr>
+   main details
+    <div id="detalye">  
+    </div>
+    <!-- bulag button para ma append -->
+    <button id="submit">add to page</button>
+<hr>
+
+nft details client
+
+
+<div id="nftDetailsClient">
+
+</div>
+<button id="nftSubmitClient">add nft</button>
+
+<hr>
+nft details you
+
+<div id="nftDetailsYou">
+
+</div>
+<button id="nftSubmitYou">add nft</button>
+<hr>
+
+
+    
+    
+    
+    <br><br>
+    <input id="pagelink" placeholder="page link"><br>
+    <br><br><button>create nfttrader page</button>
+    
+    
+    <hr>
+    <hr>
+    example result: <a href="https://www-nfttrader-io.vercel.app/deals/ethereum/6946" target="_blank" rel="noopener noreferrer">https://nfttrader-gogong.com/ethereum/deals/6946</a>
+    <!-- <br><br>
+    <hr>
+    <hr>
+    <hr>
+    example page <br><br>
+    
+    
+    <div>name: <span id="name"></span></div>
+    <div>age: <span id="age"></span></div>
+    <div>place: <span id="place"></span></div> -->
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  
+    <script>
+    
+    // $(document).ready(function() {
+    //     $('body').append('akjsdhkasdhjkahksdj')
+    // })
+
+
+
+    //general input
+    function input(id, note) {
+      
+
+        $('#detalye').append(`<br>
+        <input id="${id}" placeholder="${note}">
+        
+        `)
+    }
+
+    input('pageLink','deal number ug link sa page')
+    input('clientName','client name')
+    input('clientAddress','client address')
+    input('yourName','your name')
+    input('yourAddress','your address')
+
+
+    function inputNFTClient(id, note) {
+      
+
+      $('#nftDetailsClient').append(`<br>
+      <input id="${id}" placeholder="${note}">
+      
+      `)
+  }
+
+  inputNFTClient('image', 'image')
+  inputNFTClient('collectionName','collectionName')
+  inputNFTClient('id','id#')
+
+
+  function inputNFTYou(id, note) {
+      
+
+      $('#nftDetailsYou').append(`<br>
+      <input id="${id}" placeholder="${note}">
+      
+      `)
+  }
+
+  inputNFTYou('image','image')
+  inputNFTYou('collectionName','collectionName')
+  inputNFTYou('id','id#')
+    </script>
+</body>
+</html>
